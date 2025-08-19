@@ -1,0 +1,105 @@
+.TITLE {
+    color: #d7d7d7;
+    text-decoration: none;
+}
+
+.page-header {
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.task-header {
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.task-card {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn-toggle {
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+    background-color: white;
+    }
+
+.btn-check:checked + .btn-toggle {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: #888;
+    }
+
+.btn-submit {
+    background-color: #ffb400;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background-color: #e6a200;
+    color: white;
+}
+
+.card-leave {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.form {
+    background: linear-gradient(90deg,rgba(255, 250, 250, 1) 0%, rgba(230, 230, 230, 1) 66%, rgba(196, 196, 196, 1) 100%);
+}
+
+.status {
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 4px 16px;
+    font-size: 0.9rem;
+}
+
+.status-waiting {
+    background-color: #ffb400;
+    color: white;
+}
+
+.status-approved {
+    background-color: #00c569;
+    color: white;
+}
+
+.status-deny {
+    background-color: red;
+    color: white;
+}
+
+.leave-title {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.leave-icon {
+    font-size: 1.2rem;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.text-detail {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.hidden {
+    display: none;
+}
