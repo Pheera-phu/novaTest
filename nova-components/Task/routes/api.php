@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\task;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function (Request $request) {
-//     //
-// });
+Route::get('/tasks', function (Request $request) {
+    $totalTasks = task::count();
+    $pendingTasks = task::where('status', 'รอดำเนินการ')->count();
+    $inProgressTasks = task::where('status', 'กำลังดำเนินการ')->count();
+    $completedTasks = task::where('status', 'เสร็จสิ้น')->count();
+
+    $tasks = task::orderBy('created_at', 'desc')->get();
+
+    return response()->json([
+        'stats' => [
+            'total' => $totalTasks,
+            'pending' => $pendingTasks,
+            'in_progress' => $inProgressTasks,
+            'completed' => $completedTasks
+        ],
+        'tasks' => $tasks
+    ]);
+});
